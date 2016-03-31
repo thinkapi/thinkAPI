@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="jquery/jquery-2.0.3.min.js"></script>
+<style type="text/css">
+*{margin:0 auto; padding:0}
+body{height:100%; overflow:hidden; margin:0px; padding:0px;}
+.box {height:100%; background:#EEE; border-right: #CCC 1p solid; position:absolute; width:98%;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);} 
+.box li{border-bottom:1px solid #CCC; text-indent:18px}
+.box li p{line-height:32px; font-size:14px; text-indent:26px}
+.box li a{text-decoration:none; color:#666}
+.meun{ line-height:39px;font-size:14px; font-weight:bolder; background:#D7D7D7; color: #666; cursor:pointer}
+/*水平翻转*/
+.flipx {filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);-webkit-transform: rotate(90deg);transform: rotate(90deg); margin-top:-10px; margin-right:3px !important}
+</style>
+</head>
+
+<body>
+<div class=box>
+    <ul>
+        <li><h2 style="line-height:42px; text-indent:60px">文档</h2></li>
+        <li>
+            <div class="meun">总则 <span style="float:right; margin-right:12px">></span></div>
+            <p><a href="requst.html" target="mainFrame">请求协议</a></p>
+            <p><a href="safe.html" target="mainFrame">数据安全</a></p>
+        </li>
+        <li>
+            <div class="meun">错误处理 <span style="float:right; margin-right:12px">></span></div>
+            <p><a href="error.html"  target="mainFrame">错误处理</a></p>
+        </li>
+        <li class="show">
+            <div class="meun">接口列表 <span style="float:right; margin-right:12px" class="flipx">></span></div>
+            <p><a href="goods_all.html" target="mainFrame">商品列表</a></p>
+            <p><a href="goods_detail.html" target="mainFrame">商品详情</a></p>
+            <p><a href="advert.html" target="mainFrame">读取广告</a></p>
+            <p><a href="search.html" target="mainFrame">搜索商品</a></p>
+            <p><a href="tags.html" target="mainFrame">热搜标签</a></p>
+        </li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	$("li:not(.show) p").hide();
+	$(".meun").on("click",function(){
+		$("span").removeClass("flipx");
+		$(this).children("span").addClass("flipx");
+		$("li p").hide();
+		$(this).nextAll("p").show();
+	});
+});
+</script>
+</html>

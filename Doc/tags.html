@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>右</title>
+<script src="jquery/jquery-2.0.3.min.js"></script>
+<style type="text/css">
+*{margin:0 auto; padding:0}
+body{height:100%; margin:0px; padding:0px;}
+.box {height:100%; background:#EEE; border-right: #CCC 1p solid; position:absolute; width:98%;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);} 
+table{clear:both}
+.box li{border-bottom:1px solid #CCC; text-indent:18px}
+.box li p{line-height:32px; font-size:14px; text-indent:26px}
+.box li a{text-decoration:none; color:#666}
+.meun{ line-height:39px;font-size:14px; font-weight:bolder; background:#D7D7D7; color: #666; cursor:pointer}
+/*水平翻转*/
+.flipx {filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);-webkit-transform: rotate(90deg);transform: rotate(90deg); margin-top:-10px; margin-right:3px !important}
+.table{border-top:1px solid #D7D7D7;border-left:1px solid #D7D7D7; margin-top:20px; margin-bottom:50px}
+.table td{text-indent:10px; border-bottom:1px solid #D7D7D7;border-right:1px solid #D7D7D7}
+.body{margin-left:42px; margin-right:42px}
+.url{width:100%; height:36px; line-height:36px; border:1px dashed #DFDFDF; background-color:#EEE; margin-bottom:20px; margin-top:20px; text-indent:10px}
+.json{width:95%; height:auto; font-size:13px; line-height:32px; border:1px dashed #DFDFDF; background-color:#EEE; margin-bottom:20px; margin-top:20px; padding:20px}
+h3{clear:both; margin-top:20px}
+</style>
+</head>
+
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="70"><h3>&nbsp;&nbsp;ThinkAPI,不仅仅只是快</h3></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:50px">
+  <tr>
+    <td height="36" bgcolor="#D0D0D0"><span style="margin-left:42px">搜索标签</span><span style="float:right; margin-right:20px; font-size:14px"><a href="javascript:histroy.go(-1)">返回</a></span></td>
+  </tr>
+</table>
+
+<div class="body">
+
+<h3>接口地址</h3>
+
+<div class="url">/search/tags</div>
+
+<h3>参数</h3>
+<table width="800" border="0" align="left" cellpadding="0" cellspacing="0" class="table">
+  <tr>
+    <td width="16%" height="30" bgcolor="#E8E8E8">参数</td>
+    <td width="16%" bgcolor="#E8E8E8">请求方式</td>
+    <td width="12%" bgcolor="#E8E8E8">必要性</td>
+    <td width="56%" bgcolor="#E8E8E8">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="30">order</td>
+    <td>GET</td>
+    <td>可选</td>
+    <td>按热度排序 值hot</td>
+  </tr>
+  </table>
+<h3>返回示例</h3>
+
+<div class="json">{<br>
+&quot;code&quot;: 1000,<br>
+&quot;massage&quot;: &quot;请求成功&quot;,<br>
+&quot;data&quot;: [<br>
+{<br>
+&quot;id&quot;: &quot;1&quot;,<br>
+&quot;tag_name&quot;: &quot;Apple&quot;,<br>
+&quot;hot&quot;: &quot;99&quot;<br>
+},<br>
+{<br>
+&quot;id&quot;: &quot;2&quot;,<br>
+&quot;tag_name&quot;: &quot;Apple Watch&quot;,<br>
+&quot;hot&quot;: &quot;98&quot;<br>
+},<br>
+{<br>
+&quot;id&quot;: &quot;3&quot;,<br>
+&quot;tag_name&quot;: &quot;Mackbook&quot;,<br>
+&quot;hot&quot;: &quot;96&quot;<br>
+},<br>
+{<br>
+&quot;id&quot;: &quot;4&quot;,<br>
+&quot;tag_name&quot;: &quot;iPad&quot;,<br>
+&quot;hot&quot;: &quot;95&quot;<br>
+},<br>
+{<br>
+&quot;id&quot;: &quot;5&quot;,<br>
+&quot;tag_name&quot;: &quot;中国黄金&quot;,<br>
+&quot;hot&quot;: &quot;90&quot;<br>
+}<br>
+]<br>
+}</div>
+
+</div>
+
+
+</body>
+</html>

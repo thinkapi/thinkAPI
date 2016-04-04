@@ -1,4 +1,4 @@
 # ThinkAPI
-# www.ThinkAPI.org
+# www.thinkapi.org
 # thinkAPI 接口开发框架
 #
